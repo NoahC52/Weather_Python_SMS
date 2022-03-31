@@ -46,7 +46,7 @@ def sms_app():
         # This is where we actually get the weather data that we use with our longitude and latitude.
         url_weather = f"https://api.openweathermap.org/data/2.5/weather?lat=" \
                       f"{lat}&lon={lon}&appid={api_key}&units=imperial"
-        # Here we begin to transfer all our weather data that we want to parse to the user into variables.
+        # Here we begin to transfer all our weather data that we want to gather into variables.
         response_weather = requests.get(url_weather).json()
         temp = response_weather["main"]["temp"]
         temp_feel = response_weather["main"]["feels_like"]
